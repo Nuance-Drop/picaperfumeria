@@ -4,44 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PICA PERFUMERÍA | Chupacabra</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root { --bg: #0a0a0a; --text: #f4ecd8; --muted: #a39b8b; --accent: #b88a44; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: var(--text); font-family: 'Cinzel', serif; line-height: 1.6; }
-        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(180deg, #050505 0%, #1a1a1a 100%); min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; border-bottom: 1px solid #333; }
-        .logo-text { font-family: 'Pirata One', cursive; font-size: 2.5rem; color: var(--text); margin-bottom: 20px; letter-spacing: 3px; border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
-        .hero h1 { font-family: 'Pirata One', cursive; font-size: 4rem; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 0 0 15px rgba(184, 138, 68, 0.3); }
-        .hero p { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 40px; text-align: center; }
-        .content { padding: 60px 20px; max-width: 600px; margin: 0 auto; text-align: center; }
-        .content h2 { font-family: 'Pirata One', cursive; font-size: 2.5rem; margin-bottom: 20px; }
-        .content p { color: var(--muted); margin-bottom: 20px; }
+        
+        /* The main ad image */
+        .hero-img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* The product description area */
+        .content { 
+            padding: 40px 20px; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 30px; 
+        }
+        
+        .content-text { flex: 1; min-width: 280px; text-align: center; }
+        .content-text h2 { font-family: 'Pirata One', cursive; font-size: 2rem; margin-bottom: 15px; color: var(--accent); }
+        .content-text p { color: var(--muted); margin-bottom: 15px; font-size: 0.95rem; }
+        
+        /* The bottle image - mix-blend-mode hides the white background! */
+        .bottle-img { 
+            flex: 1; 
+            min-width: 280px; 
+            max-width: 350px; 
+            mix-blend-mode: multiply; 
+        }
+        
+        /* The Signup Section */
         .signup { text-align: center; padding: 60px 20px; background: #050505; border-top: 1px solid #333; }
-        .signup h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--accent); }
-        .signup p { margin-bottom: 30px; color: var(--muted); }
+        .signup h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--accent); letter-spacing: 2px;}
+        .signup p { margin-bottom: 30px; color: var(--muted); font-size: 0.9rem; }
         .form-box { max-width: 500px; margin: 0 auto; background: #f4ecd8; padding: 15px; border-radius: 8px; }
         .form-box iframe { width: 100% !important; border: none; }
-        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #555; }
+        
+        footer { text-align: center; padding: 20px; font-size: 0.7rem; color: #555; letter-spacing: 1px;}
     </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="logo-text">PICA PERFUMERÍA</div>
-        <h1>CHUPACABRA</h1>
-        <p>Nopal &bull; Vanilla Ice Cream &bull; Desert</p>
-    </header>
+    <!-- This displays your beautiful ad image at the top -->
+    <img src="hero.jpg" alt="Chupacabra by Pica Perfumeria" class="hero-img">
+
+    <!-- Product details with the bottle cutout -->
     <section class="content">
-        <h2>A Scent of Craving</h2>
-        <p>Born from the heat of the desert and the chill of the night. <em>Chupacabra</em> is a storytelling fragrance that balances the unexpected spice of wild nopal with the intoxicating sweetness of vanilla ice cream.</p>
-        <p>A fragrance for those who crave the unknown. 50 mL / 1.7 FL OZ Eau de Parfum.</p>
+        <div class="content-text">
+            <h2>A Scent of Craving</h2>
+            <p>Born from the heat of the desert and the chill of the night. <em>Chupacabra</em> is a storytelling fragrance that balances the unexpected spice of wild nopal with the intoxicating sweetness of vanilla ice cream.</p>
+            <p>A fragrance for those who crave the unknown.</p>
+        </div>
+        <img src="bottle.jpg" alt="Chupacabra Bottle" class="bottle-img">
     </section>
+
+    <!-- Your Brevo Email Form -->
     <section class="signup">
-        <h3>Join the Coven</h3>
+        <h3>JOIN THE COVEN</h3>
         <p>Sign up to receive early access, brand lore, and exclusive drops.</p>
         <div class="form-box">
+            
             <iframe width="540" height="305" src="https://a1e80f83.sibforms.com/v2/serve/MUIFABpVvGgOu19bhdw4jTd5_gqw4JUKBklDo-49tTgH4LXFQpcrSbho5sBQVzqXzGUS-iuaHvtlkULLdWfAgKVQy3DIXfTnumRd_pv8mYy5SzIUsPqSL1iAzI_QpPdjK0ljm1UM6uYzlBIlzEurHvFMxMZcqlBs7fF9DWhpBcz4j-pSt_pMw_063wOWEXh2d_sTb_lxcDoNjaGTVQ==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+            
         </div>
     </section>
+
     <footer>&copy; 2026 PICA PERFUMERÍA. ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
